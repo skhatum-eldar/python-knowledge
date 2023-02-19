@@ -4,6 +4,20 @@
 # Выведите минимальное количество монет, которые нужно перевернуть.
 # 5 -> 1 0 1 1 0
 # 2
+n = int(input('Enter the number of coins: '))
+eagle_count = 0
+tail_count = 0
+
+for i in range(n):
+    m = int(input('Enter if its eagle (0) or tail (1): '))
+    if m == 0:
+        eagle_count += 1
+    if m == 1:
+        tail_count +=1
+if eagle_count > tail_count:
+    print(f'YOU NEED TO TURN OVER {tail_count} TAILS')
+else:
+    print(f'YOU NEED TO TURN OVER {eagle_count} EAGLES')
 
 
 # Задача 12: Петя и Катя – брат и сестра. Петя – студент, а Катя – школьница.
